@@ -186,7 +186,7 @@ sap.ui.define([
 						oModel.setProperty("/fiscalCode", oData.Cf);
 						oModel.setProperty("/state", oData.Country);
 						oModel.setProperty("/region", oData.Region);
-						oModel.setProperty("/postcode", oData.Cap);
+						oModel.setProperty("/postCode", oData.Cap);
 						oModel.setProperty("/city", oData.Citta);
 						oModel.setProperty("/district", oData.Bezei);
 						oModel.setProperty("/street", oData.Indirizzo);
@@ -617,6 +617,7 @@ sap.ui.define([
 			var oModel = this.getView().getModel();
 			var oDataModel = this.getView().getModel("oData");
 			var entity = {};
+			entity["CfDelegato"] = oModel.getProperty("/fiscalCode");
 			entity["Piva"] = oModel.getProperty("/piva");
 			entity["Addetti9"] = oModel.getProperty("/until9");
 			entity["ProcessType"] = "GAP";
